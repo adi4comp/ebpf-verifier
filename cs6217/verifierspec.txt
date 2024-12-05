@@ -1,0 +1,12 @@
+Verifier Natural language specification
+
+1. Programs only access memory within bounds of pre-defined regions (e.g., stack, packet regions).
+2. They do not perform unsafe pointer arithmetic or invalid memory accesses.
+3. They avoid indirect memory leaks by not reading uninitialized memory.
+4. Programs do not expose kernel data to userspace unless explicitly allowed.
+5. Programs are acyclic or, if they contain loops, demonstrate that these loops are safe to execute without causing verification failures.
+6. Pointer arithmetic and comparisons adhere strictly to safety rules, such as only comparing pointers within the same memory region.
+7. Function calls (with constraints like parameter updates and invalidation of temporary registers).
+8. Controlled usage of shared memory regions and maps.
+9. Arithmetic, logical, and bitwise operations without causing overflows or undefined behavior.
+10. Programs avoid operations that cause excessive path explosion (e.g., deeply nested loops or large branching).
