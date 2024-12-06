@@ -13,5 +13,5 @@ WORKDIR /verifier/build
 RUN cp -r /usr/include/asm-generic /usr/include/asm
 RUN cmake .. -DCMAKE_BUILD_TYPE=Release
 RUN make -j $(nproc)
-WORKDIR /verifier
+WORKDIR /verifier/cs6217
 # ENTRYPOINT ["./check"]
