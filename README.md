@@ -1,4 +1,4 @@
-# CS6217 Assignment: eBPF Program Verification
+# CS6217 Assignment: LLM generated eBPF Program Verification
 
 This assignment builds upon the **PREVAIL** eBPF verifier repository. Below is a detailed guide for running experiments, synthesizing programs, and verifying them.
 
